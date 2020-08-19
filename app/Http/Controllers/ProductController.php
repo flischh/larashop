@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\ProductAttributeValue;
 use App\Models\AttributeOption;
 use App\Models\Category;
+use App\Models\ProductInventory;
 
 use Str;
 

@@ -101,6 +101,14 @@
 						{!! Form::close() !!}
 						<div class="product-details-cati-tag mt-35">
 							<ul>
+								<li class="categories-title">Stock : </li>
+								@if (is_array($product))
+								@foreach ($product->variants as $variant)
+									<li>{{ $variant->productInventory->qty }}</li>
+								@endforeach
+								@endif
+
+								<br>
 								<li class="categories-title">Categories :</li>
 								@foreach ($product->categories as $category)
 									<li><a href="{{ url('products/category/'. $category->slug ) }}">{{ $category->name }}</a></li>

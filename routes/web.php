@@ -52,6 +52,7 @@ Route::group(
         Route::get('products/{productID}/add-image', 'ProductController@addImage')->name('products.add_image');
         Route::post('products/images/{productID}', 'ProductController@uploadImage')->name('products.upload_image');
         Route::delete('products/images/{imageID}', 'ProductController@removeImage')->name('products.remove_image');
+        
         Route::resource('attributes', 'AttributeController');
         Route::get('attributes/{attributeID}/options', 'AttributeController@options')->name('attributes.options');
         Route::get('attributes/{attributeID}/add-option', 'AttributeController@add_option')->name('attributes.add_option');
